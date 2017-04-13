@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'users#index'
   get 'create' => 'users#create'
   get 'delete' => 'users#delete'
+  get 'toggle_score' => 'users#toggle'
 end

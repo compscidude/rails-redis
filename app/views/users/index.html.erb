@@ -15,8 +15,7 @@
 </div>
 
 <div class="row text-center top-buffer">
-    <button class="btn btn-default"> Toggle Name Order </button>
-    <button class="btn btn-default"> Toggle Score Order </button>
+    <%= link_to '<button class="btn btn-default"> Toggle Score Order </button>'.html_safe, toggle_score_path %>
 </div>
 
 <hr>
@@ -26,8 +25,8 @@
     <ul class="list-group col-sm-6 col-sm-offset-3 text-center">
         <h3> <%= @Users.count %> Users Loaded From Redis </h3>
         <h4> Redis will update whenever a new user is generated/deleted </h4>
-        <% @Users.each do |user| %>
-             <li class="list-group-item"> <%= user['name'] %> - <%= user['score'] %> </li> 
+        <% @Users.each_with_index do |user, idx| %>
+             <li class="list-group-item"> <strong> [ <%= idx+1 %> ] </strong> <%= user[0] %> - <%= user[1] %> </li> 
         <% end %>
     </ul>
 </div>
