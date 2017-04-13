@@ -1,24 +1,8 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+redis-rails leaderboards
+=====================
+Todo: Add credit card to Heroku in order to use Redis to go =(
 
-* Ruby version
+![Screenshot](http://imgur.com/FHR81AD.png?raw=true)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
