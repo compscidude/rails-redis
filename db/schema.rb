@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170413073625) do
+ActiveRecord::Schema.define(version: 20170413141745) do
 
-  create_table "Users", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "name"
     t.float    "score"
     t.datetime "created_at", null: false
