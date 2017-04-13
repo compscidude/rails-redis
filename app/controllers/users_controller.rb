@@ -20,7 +20,6 @@ class UsersController < ApplicationController
         users = User.order("RANDOM()").limit(100)
         users.each do |user|
             if (user.destroy)
-                puts user.score
                 remove_from_redis(user)
             end 
         end 
