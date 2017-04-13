@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
 
     include UsersHelper
-    #after_action :refetch_users
 
     def index
-        # fetch users from our redis
+        # fetch users from the redis server
         @Users ||= fetch_users
     end     
 
