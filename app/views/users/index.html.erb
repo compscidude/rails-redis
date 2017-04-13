@@ -1,0 +1,36 @@
+
+
+<div class="row">
+    <div class="Jumbotron text-center">
+        <h1> Redis + Rails </h1>
+        <h2> <small> Dummy users generated with a score between 0.0 - 5.0 </small> </h2>
+    </div>
+</div>
+
+
+<div class="row text-center">
+<%= link_to '<button class="btn btn-default"> Generate 100 Random Users</button>'.html_safe, create_path %>
+<%= link_to '<button class="btn btn-default"> Delete 100 Random Users</button>'.html_safe, delete_path %>
+
+</div>
+
+<div class="row text-center top-buffer">
+    <button class="btn btn-default"> Toggle Name Order </button>
+    <button class="btn btn-default"> Toggle Score Order </button>
+</div>
+
+<hr>
+
+<div class="row">
+    <!-- retrieved from our redis, in json format -->
+    <ul class="list-group col-sm-6 col-sm-offset-3 text-center">
+        <h3> <%= @Users.count %> Users Loaded From Redis </h3>
+        <h4> Redis will update whenever a new user is generated/deleted </h4>
+        <% @Users.each do |user| %>
+             <li class="list-group-item"> <%= user['name'] %> - <%= user['score'] %> </li> 
+        <% end %>
+    </ul>
+</div>
+
+
+
